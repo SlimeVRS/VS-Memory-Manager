@@ -29,6 +29,13 @@ public:
 	std::string ObtenerValor() override {
 		std::stringstream str;
 		str << (*instance);
+		return str.str();
+	}
+
+	void DefinirValor(std::string NuevoValor) {
+		std::cout << "Valor antiguo" << NuevoValor << "\n";
+		std::stringstream str(NuevoValor);
+		str >> (*instance);
 		std::cout << "Nuevo Valor" << *instance << "\n";
 	}
 	std::string ObtenerTipo(T& type);
@@ -38,6 +45,14 @@ public:
 template<typename T>
 VSPointerInstance<T>::~VSPointerInstance() {
 	delete instance;
+}
+
+template<typename T>
+VSPointerInstance<T>::VSPointerInstance(T instance, std::string& ID){
+	VSPtrInfo::count_ref = 1;
+	VSPtrInfo::ID = ID;
+	VSPtrInfo::type = ObtenerTipo(instance);
+	this->instance = instance;
 }
 template<typename T>
 std::string VSPointerInstance<T>::ObtenerTipo(T& type) {

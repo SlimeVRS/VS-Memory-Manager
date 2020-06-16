@@ -51,7 +51,7 @@ public:
             *addr = element;
         }
         else {
-            RemoteMemory::ObtenerInstance()->setValor(element, id)
+            RemoteMemory::ObtenerInstance()->setValor(element, id);
         }
     }
     T& operator&() {

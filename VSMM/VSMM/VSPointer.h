@@ -14,7 +14,6 @@ private:
     bool is_remote = false;
     std::string get_id();
     T* get_ptr();
-<<<<<<< HEAD
     void addInstanceLocally();
     void addInstanceRemotely();
     void setVSPtrIdFromGarbageCollector();
@@ -22,15 +21,6 @@ private:
     void decrementRefCountRemotely(std::string id);
     void incrementRefCountLocally(std::string id);
     void incrementRefCountRemotely(std::string id);
-=======
-    void LAgregarInstancia();
-    void RAgregarInstancia();
-    void DefinirIDGC();
-    void LDisminuirContador(std::string id);
-    void RDisminuirContador(std::string id);
-    void LAumentarContador(std::string id);
-    void RAumentarContador(std::string id);
->>>>>>> f985368aae977774ea78f0816f64c5c410b9f907
 public:
     explicit VSPtr(bool is_remote) {
         printf("Constructor\n");
@@ -61,7 +51,7 @@ public:
             *addr = element;
         }
         else {
-            RemoteMemory::ObtenerInstance()->setValor(element, id)
+            RemoteMemory::ObtenerInstance()->setValor(element, id);
         }
     }
     T& operator&() {
@@ -103,11 +93,7 @@ T* VSPtr<T>::get_ptr() {
     return this->addr;
 }
 template<class T>
-<<<<<<< HEAD
 void VSPtr<T>::addInstanceLocally() {
-=======
-void VSPtr<T>::LAgregarInstancia() {
->>>>>>> f985368aae977774ea78f0816f64c5c410b9f907
     this->is_remote = false;
     addr = new T{};
     setVSPtrIdFromGarbageCollector();
@@ -116,11 +102,7 @@ void VSPtr<T>::LAgregarInstancia() {
     std::cout << "DIRECCION DE MEMORIA DEL DATO QUE GUARDA EL VSPointer  " << get_id() << "   " << addr << "\n\n";
 }
 template<class T>
-<<<<<<< HEAD
 void VSPtr<T>::addInstanceRemotely() {
-=======
-void VSPtr<T>::RAgregarInstancia() {
->>>>>>> f985368aae977774ea78f0816f64c5c410b9f907
     this->is_remote = true;
     const char* name = typeid(T).name();
     this->id = GarbageCollector::ObtenerGCInstance()->GenerarID();
@@ -128,7 +110,6 @@ void VSPtr<T>::RAgregarInstancia() {
     std::cout << "El id es " << id << "\n";
 }
 template<class T>
-<<<<<<< HEAD
 void VSPtr<T>::setVSPtrIdFromGarbageCollector() {
     this->id = GarbageCollector::ObtenerGCInstance()->GenerarID();
 }
@@ -146,25 +127,6 @@ void VSPtr<T>::incrementRefCountLocally(std::string id) {
 }
 template<class T>
 void VSPtr<T>::incrementRefCountRemotely(std::string id) {
-=======
-void VSPtr<T>::DefinirIDGC() {
-    this->id = GarbageCollector::ObtenerGCInstance()->GenerarID();
-}
-template<class T>
-void VSPtr<T>::LDisminuirContador(std::string id) {
-    GarbageCollector::ObtenerGCInstance()->ReducirContador(id);
-}
-template<class T>
-void VSPtr<T>::RDisminuirContador(std::string id) {
-    RemoteMemory::ObtenerInstance()->RDisminuirInstancia(id);
-}
-template<class T>
-void VSPtr<T>::LAumentarContador(std::string id) {
-    GarbageCollector::ObtenerGCInstance()->AumentarContador(id);
-}
-template<class T>
-void VSPtr<T>::RAumentarContador(std::string id) {
->>>>>>> f985368aae977774ea78f0816f64c5c410b9f907
     RemoteMemory::ObtenerInstance()->RAumentarInstancia(id);
 }
 

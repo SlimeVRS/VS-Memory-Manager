@@ -37,8 +37,9 @@ public:
 };
 template<typename T>
 
-void AgregarInstance(const T& valor, std::string ID) {
-	VSPointerInstance<T> VSPointerI = new VSPointerInstance<T>(valor, ID);
+void GarbageCollector::AgregarInstance(const T& valor, std::string ID) {
+	VSPointerInstance<T>* VSPointerI = new VSPointerInstance<T>(valor, ID);
+	mapGC[ID] = VSPointerI;
 }
 
-#endif // !1
+#endif // !GARBAGECOLLECTOR_HEADER

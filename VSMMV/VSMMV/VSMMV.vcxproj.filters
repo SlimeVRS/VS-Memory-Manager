@@ -36,6 +36,9 @@
     <ClInclude Include="VSPointerInstance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VSPointer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
