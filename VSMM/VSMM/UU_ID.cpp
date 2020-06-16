@@ -6,7 +6,7 @@ std::string UU_ID::GenerarUUID() {
 	std::mt19937 mr(rd());
 	std::uniform_int_distribution<int> dist(0, CHARS.size() - 1);
 	std::string currentUUID = std::string(24, ' ');
-	for (char &i : currentUUID) {
+	for (char& i : currentUUID) {
 		int indice = dist(mr);
 		i = CHARS[indice];
 	}
