@@ -1,50 +1,51 @@
 
 #title {
     color: white;
+	font-weight: bold;
     position: absolute;
-    left: 100px;
+    left: 50px;
+	font-family: "Arial Black", Gadget, sans-serif;
 }
 
 #default_port {
     position: absolute;
     left: 50px;
     top: 90px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-weight: bold;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 #default_ip {
     position: absolute;
-    left: 53px;
+    left: 50px;
     top: 140px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: white
+    color: black
 }
 
 #defualt_password {
     position: absolute;
     left: 53px;
     top: 190px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: white
+    color: black
 }
 
-#connection {
+#Ingresar {
     position: absolute;
-    left: 53px;
+    left: 50px;
     top: 530px;
     width: 135px;
     height: 40px;
-    font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
-    background-color: rgb(41, 179, 23);
+    background-color: rgb(50, 155, 215);
 }
 
 
@@ -61,6 +62,7 @@ input {
     position: absolute;
     left: 50px;
     top: 270px;
+	font-family: "Courier New", Courier, monospace;
 }
 
 #labelIpAddress {
@@ -68,8 +70,7 @@ input {
     left: 53px;
     top: 230px;
     font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 
@@ -77,6 +78,7 @@ input {
     position: absolute;
     left: 53px;
     top: 470px;
+	font-family: "Courier New", Courier, monospace;
 }
 
 #labelPassword {
@@ -84,8 +86,7 @@ input {
     left: 53px;
     top: 430px;
     font-size: 30px;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 
@@ -93,13 +94,13 @@ input {
     position: absolute;
     left: 50px;
     top: 370px;
+	font-family: "Courier New", Courier, monospace;
 }
 
 #labelPort {
     position: absolute;
     left: 53px;
     top: 330px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 30px;
-    font-weight: bold;
 }
