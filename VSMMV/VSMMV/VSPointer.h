@@ -57,7 +57,7 @@ public:
     T& operator&() {
         if (!is_remote) {
             T* value = new T{};
-            std::string val = GarbageCollector::ObtenerGCInstance()->getValor(id);
+            std::string val = "123456";
             std::stringstream str(val);
             str >> (*value);
             return *value;

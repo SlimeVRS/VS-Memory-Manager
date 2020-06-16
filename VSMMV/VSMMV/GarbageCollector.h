@@ -26,14 +26,13 @@ public:
 	std::string GenerarID() const;
 	template<typename T>
 	void AgregarInstance(const T& valor, std::string ID);
-	void AumentarContador(const std::string& id);
-	void ReducirContador(const std::string& id);
+	void AumentarContador(const std::string& ID);
+	void ReducirContador(const std::string& ID);
 	void PrintGCInfo();
 	void EjecutarGC();
 	void GenerarJSON();
 	std::thread THREAD();
-	void setValor(std::string NuevoValor, std::string& id);
-	std::string getValor(std::string& id);
+	void setValor(std::string NuevoValor, std::string& ID);
 };
 template<typename T>
 
