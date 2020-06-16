@@ -18,6 +18,9 @@
     <ClInclude Include="ConectorCliente.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConectorServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="GarbageCollector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -33,34 +36,21 @@
     <ClInclude Include="VSPointerInstance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="jsoncpp\json\json.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jsoncpp\json\json-forwards.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VSPointer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConectorCliente.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GarbageCollector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RemoteMemory.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StyleHeap.css">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UU_ID.cpp">
+    </None>
+    <None Include="StyleRemoteMemory.css">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="jsoncpp\jsoncpp.cpp">
+    </None>
+    <None Include="PAGE.htm">
       <Filter>Source Files</Filter>
-    </ClCompile>
+    </None>
   </ItemGroup>
 </Project>
